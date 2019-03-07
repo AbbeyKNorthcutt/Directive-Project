@@ -1,0 +1,8 @@
+<button btn btn-primary (click)="revealUniverse = !revealUniverse"> Reveal the secrets.... </button>
+<p
+*ngIf="revealUniverse">Secrets revealed: 42. Congrats, you are now all-knowing.</p>
+<div 
+*ngFor="let logNumber of log"
+[ngStyle] ="{backgroundColor: logNumber > 5 ? 'cyan' : 'white'}"
+[ngClass]="{'white-text': logNumber >= 5}"
+> {{ logNumber }} </div>
